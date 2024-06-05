@@ -15,7 +15,7 @@ import static java.net.HttpURLConnection.*;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class GetOrdersUser {
+public class GetOrdersUserTests {
 
     private UserApi userApi;
     private User user;
@@ -28,8 +28,8 @@ public class GetOrdersUser {
         userApi = new UserApi();
         ordersApi = new OrdersApi();
         user = UserGenerator.random();
-        ValidatableResponse response = userApi.createUser(user);
-        accessToken = response
+        ValidatableResponse createResponse = userApi.createUser(user);
+        accessToken = createResponse
                 .extract()
                 .path("accessToken");
     }

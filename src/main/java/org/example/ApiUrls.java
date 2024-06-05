@@ -1,3 +1,5 @@
+package org.example;
+
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
@@ -9,7 +11,6 @@ public class ApiUrls {
     public static final String LOGIN_USER = "/api/auth/login";
     public static final String CHANGE_USER = "/api/auth/user";
     public static final String ORDERS = "/api/orders";
-    public static final String ALL_ORDERS = "/api/orders/all";
     public static final String INGREDIENTS = "/api/ingredients";
 
     public static RequestSpecification spec() {
